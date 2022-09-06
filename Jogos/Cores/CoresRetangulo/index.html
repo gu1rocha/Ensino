@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ptBR">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>CORES RETÂNGULO</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@48,400,0,0">
+    <link rel="stylesheet" href="/assets/css/inicialize.css">
+    <link rel="stylesheet" href="/Jogos/assets/css/nav.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    
+    <script src="./assets/js/script.js" defer></script>
+    <script src="./assets/js/timer.js" defer></script>
+  </head>
+
+  <body>
+    <nav>
+        <div class="container">
+          <span class="material-symbols-sharp" onclick="window.location.href='../'">arrow_back_ios</span>
+          <h1>Cores Retângulo</h1>
+          <span class="material-symbols-sharp">info</span>
+        </div>
+    </nav>
+    <main>
+      <div class="boxGame">
+        <h1>Encontre o diferente</h1>
+        <div class="game"></div>
+        <div id="app"></div>
+      </div>
+      <div class="boxConf">
+        <div class="boxInit">
+          <h1>INICIAR JOGO</h1>
+          <h2></h2>
+          <select>
+            <option value="livre">livre</option>
+            <option value="20">fácil</option>
+            <option value="8">médio</option>
+            <option value="4">difícil</option>
+          </select>
+          <div class="boxBtns">
+            <button class="sair" onclick="window.location.href='../'">SAIR</button>
+            <button class="jogar">JOGAR</button>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
