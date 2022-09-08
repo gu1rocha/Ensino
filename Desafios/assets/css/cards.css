@@ -20,7 +20,3 @@ main .card:hover{
 main .card img{
     height: 10rem;
 }
-
-main .card img.g{
-    height: 15rem;
-}
