@@ -19,6 +19,8 @@ let GerarInputs = ()=>{
     document.documentElement.style.setProperty('--j', +select.value === 8 ? 0 : 50+"%");
     document.documentElement.style.setProperty('--k', +select.value/2);
     document.documentElement.style.setProperty('--l', +select.value === 8 ? 5+'rem' : 4+'rem');
+    
+    box.innerHTML = ''
 
     for (let classe of classes) {
         let input = `
