@@ -3,12 +3,21 @@ const boxConf = document.querySelector('.boxConf')
 const select = boxConf.querySelector('select')
 const btnJogar = boxConf.querySelector('.jogar')
 const boxRealod = document.querySelector('.boxRealod')
+const boxGame = document.querySelector('.boxGame')
 
 let classes = []
 let quadrados = [12,13,21,22,23,24,32,33]
 let circulos =  [13,22,24,31,32,34,35,42,44,53]
 
-let error = false, verificador = 1;
+let error = false, verificador = 1, text = '';
+
+select.addEventListener('change',()=>{
+  text = `
+  Preencha as lacunas com todos os número de 1 ao ${select.value}, de modo que nenhum número fique próximo do seu sucessor ou antecessor!
+  `
+  boxConf.querySelector('p').innerText = text
+  boxGame.querySelector('h2').innerText = text
+})
 
 let RemoverTextoClasse = obj => obj = obj.className.replace(/[^0-9]/g,'')
 
