@@ -1,0 +1,130 @@
+main{
+    padding: 0;
+}
+
+.boxGame {
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0;
+    max-width: 700px;
+}
+
+.boxGame h2{
+  text-align: center;
+  padding: 0 1rem;
+}
+  
+.game{
+    display: grid;
+    gap: .2rem;
+    grid-template-columns: repeat(3, 5rem)
+}
+
+.boxGame input {
+    border: 1px solid gray;
+    height: 5rem;
+    text-align: center;
+    font-size: 50px;
+    outline: none;
+    -moz-appearance: textfield;
+    appearance: textfield;
+    border-radius: var(--j);
+    grid-column-start: var(--i);
+}
+
+.boxGame input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.boxGame button{
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    background-color: #0298cf;
+    box-shadow: 0.2rem 0.2rem 0.2rem grey;
+    color: white;
+}
+
+.boxGame button:hover{
+    box-shadow: none;
+}
+
+.boxGame .error{
+    color: #D8000C;
+    background-color: #FFBABA;
+}
+
+.boxConf{
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  z-index: 1;
+  background-color: rgba(255, 255, 255, .8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+  
+.boxInit{
+  display: flex;
+  width: 60vw;
+  max-width: 250px;
+  background: gainsboro;
+  flex-wrap: wrap;
+  flex-direction: column;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  box-shadow: .2rem .2rem .2rem gray;
+  text-align: center;
+  align-items: center;
+}
+  
+.boxInit:hover{
+  box-shadow: none;
+}
+
+.boxInit details{
+  margin-top: 1rem;
+  font-size: 1rem;
+}
+
+.boxInit details p{
+  text-align: justify;
+}
+  
+.boxInit h1{
+  text-shadow: .1rem .1rem white;
+}
+
+.boxInit .boxBtns{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.boxInit button{
+  border-radius: .5rem;
+  cursor: pointer;
+  padding: .5rem .75rem;
+  box-shadow: .2rem .2rem .2rem grey;
+  background-color: #000;
+  font-weight: bold;
+  color: white;
+}
+
+.boxInit button:hover{
+  box-shadow: none;
+}
+
+.boxInit .jogar{
+  background-color: #0298cf;
+  box-shadow: 0.2rem 0.2rem 0.2rem grey;
+}
+  
