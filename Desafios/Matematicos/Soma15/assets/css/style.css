@@ -1,3 +1,9 @@
+:root{
+  --j: 0;
+  --k: 0;
+  --l: 0;
+}
+
 main{
     padding: 0;
 }
@@ -22,7 +28,8 @@ main{
 .game{
     display: grid;
     gap: .2rem;
-    grid-template-columns: repeat(3, 5rem)
+    grid-template-columns: repeat(var(--j), 5rem);
+    /* grid-template-columns: repeat(3, 5rem) */
 }
 
 .boxGame input {
@@ -33,7 +40,6 @@ main{
     outline: none;
     -moz-appearance: textfield;
     appearance: textfield;
-    border-radius: var(--j);
     grid-column-start: var(--i);
 }
 
@@ -128,3 +134,23 @@ main{
   box-shadow: 0.2rem 0.2rem 0.2rem grey;
 }
   
+select {
+  background-color: #0563af;
+  color: white;
+  padding: .5rem;
+  border: none;
+  font-weight: bold;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+  -webkit-appearance: button;
+  appearance: button;
+  outline: none;
+  width: fit-content;
+  outline: none;
+  border-radius: .5rem;
+  margin: 1.5rem 0;
+  cursor: pointer;
+}
+  
+select:hover{
+  box-shadow: none;
+}
