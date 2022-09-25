@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imediatos Distantes</title>
+
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="Gui Rocha">
+    <meta name="description" content="Preencha as lacunas com todos os números possíveis, de modo que a soma de todos os lados resulte no valor pedido!">
+    <meta property="og:description" content="Preencha as lacunas com todos os números possíveis, de modo que a soma de todos os lados resulte no valor pedido!">
+    <meta property="og:image" content="./assets/img/imgJogo.png">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+    <link rel="stylesheet" href="../../../assets/css/inicialize.css">
+    <link rel="stylesheet" href="../../../Jogos/assets/css/nav.css">
+
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/script.js" defer></script>
+
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <span class="material-symbols-sharp" onclick="window.location.href='../'">arrow_back_ios</span>
+            <h1>Imediatos distantes</h1>
+            <span class="material-symbols-sharp">info</span>
+        </div>
+    </nav>
+    <main>
+        <div class="boxGame">
+            <h2>
+                Preencha as lacunas com todos os números de 1 ao 6, de modo que a soma de todos os lados resulte em 9!
+            </h2>
+            <div class="game"></div>
+            <button>VERIFICAR</button>
+            <div class="boxRealod">
+                <h3 class="error">Ops. Tente Novamente!</h3>
+            </div>
+        </div>
+        
+        <div class="boxConf">
+            <div class="boxInit">
+                <h1>INICIAR JOGO</h1>
+                <details>
+                    <summary>Detalhes do jogo</summary>
+                    <p>
+                        Preencha as lacunas com todos os números de 1 ao 6, de modo que a soma de todos os lados resulte em 9!
+                    </p>
+                </details>
+                <h2>
+                </h2>
+                <select>
+                    <option value="6">6 Números</option>
+                    <!-- <option value="9">9 Números</option> -->
+                </select>
+                <div class="boxBtns">
+                    <button class="sair" onclick="window.location.href='../'">SAIR</button>
+                    <button class="jogar">JOGAR</button>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
