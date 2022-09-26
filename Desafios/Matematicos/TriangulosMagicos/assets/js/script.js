@@ -6,29 +6,33 @@ const select = boxConf.querySelector('select')
 const btnJogar = boxConf.querySelector('.jogar')
 const boxRealod = document.querySelector('.boxRealod')
 
-let valor = 6, soma = 9, valAt = 0, erro = false, rol, dig1, dig2
-    classes = [], 
+let valor = 6, step = 0, soma = 9, valAt = 0,
+    erro = false, rol, dig1, dig2
+    classes = [],
+    orderSum = [],
     SeisCirc = [13, 22, 24, 31, 33, 35], 
     NoveCirc = [14, 23, 25, 32, 36, 41, 43, 45, 47], 
-    resltSeis = [9, 10, 11, 12],
+    reslutSeis = [9, 10, 11, 12],
     resultNove = [17, 19, 20, 21, 23]
 
 select.addEventListener('change',()=>{
   valor = +(select.value)
-  soma = 9
+  soma = valor === 6 ? reslutSeis[0] : resultNove[0]
   text = `
-  Preencha as lacunas com todos os números de 1 ao ${valor}, de modo que a soma de todos os lados resulte em ${9}!
+  Preencha as lacunas com todos os números de 1 ao ${valor}, de modo que a soma de todos os lados resulte em <strong>${soma}</strong>!
   `
-  boxConf.querySelector('p').innerText = text
-  boxGame.querySelector('h2').innerText = text
+  boxConf.querySelector('p').innerHTML = text
+  boxGame.querySelector('h2').innerHTML = text
 })
 
 let GerarInputs = ()=>{
   if(+select.value === 6){
+    orderSum = reslutSeis
     classes = SeisCirc
     document.documentElement.style.setProperty('--j', 5);
     document.documentElement.style.setProperty('--l', '5rem');
   }else{
+    orderSum = resultNove
     classes = NoveCirc
     document.documentElement.style.setProperty('--j', 7);
     document.documentElement.style.setProperty('--l', '4rem');
@@ -50,7 +54,7 @@ let zerar = ()=>{
 let RTC = obj => obj = obj.className.replace(/[^0-9]/g, '')
 
 let Verificar = (valDirect, input, erro)=>{
-  if(valDirect !== soma){
+  if(valDirect !== orderSum[step]){
       input.classList.add('error')
       return true
   }
@@ -68,10 +72,21 @@ let VerificarRepetido = (input, erro)=>{
 }
 
 let endGame = obj =>{
+  !!obj.slt ? select.style.display = obj.slt : select.removeAttribute('style')
   boxConf.querySelector('h1').textContent = obj.text
   boxConf.querySelector('h1').style.color = obj.color
   boxConf.removeAttribute('style')
   boxRealod.style.display = 'none';
+  btnJogar.innerText = obj.btText
+  
+  soma = orderSum[step]
+  
+  text = `
+    Preencha as lacunas com todos os números de 1 ao ${valor}, de modo que a soma de todos os lados resulte em <strong>${soma}</strong>!
+    `
+  boxConf.querySelector('p').innerHTML = text
+  boxGame.querySelector('h2').innerHTML = text
+  
 }
 
 btn.addEventListener('click',()=>{
@@ -117,7 +132,17 @@ btn.addEventListener('click',()=>{
     erro = Verificar(rol, game.querySelector('.input45'), erro);
     erro = Verificar(rol, game.querySelector('.input47'), erro);
   }
-  erro ? boxRealod.removeAttribute('style') : endGame({text: 'PARABÉNS!!!', color: 'green'})
+  if(erro){
+    boxRealod.removeAttribute('style')
+  }else{
+    ++step
+    if(step >= orderSum.length){
+      step = 0
+      endGame({text: 'PARABÉNS, POR COMPLETAR ESTE DESAFIO!!!', color: 'green', btText : 'JOGAR'})
+    }else{
+      endGame({text: 'PARABÉNS, AVANCE PARA O PRÓXIMO NÍVEL!!!', color: 'green',slt: 'none', btText: 'PRÓXIMO'})
+    }
+  }
 })
 
 btnJogar.addEventListener('click',()=>{
