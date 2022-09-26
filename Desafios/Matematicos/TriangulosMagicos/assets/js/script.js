@@ -61,6 +61,14 @@ let Verificar = (valDirect, input, erro)=>{
   return erro
 }
 
+let VerificarVazio = (input,erro) =>{
+  if(input.value.length < 1){
+    input.classList.add('error')
+    return true
+  }
+  return erro
+}
+
 let VerificarRepetido = (input, erro)=>{
   for (let newInp of game.querySelectorAll('input')) {
       if((RTC(input) !== RTC(newInp))&&(input.value == newInp.value)){
@@ -106,6 +114,7 @@ btn.addEventListener('click',()=>{
   for (let input of game.querySelectorAll('input')) {
     input.classList.remove('error')
     erro = VerificarRepetido(input, erro)
+    erro = VerificarVazio(input, erro)
   }
 
   if(+select.value === 6){
