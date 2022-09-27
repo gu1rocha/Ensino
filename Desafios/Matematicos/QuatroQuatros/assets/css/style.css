@@ -1,0 +1,75 @@
+
+
+main{
+    padding: 0;
+}
+
+.boxGame {
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0;
+    max-width: 700px;
+}
+
+.boxGame h2{
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.game{
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+  
+.game .row{
+    display: grid;
+    gap: .2rem;
+    grid-template-columns: repeat(10, 2rem);
+    align-items: center;
+}
+
+.boxGame input {
+    border: 1px solid gray;
+    height: 2rem;
+    text-align: center;
+    outline: none;
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+.boxGame input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.boxGame span{
+    text-align: center;
+}
+
+.boxGame button{
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    background-color: #0298cf;
+    box-shadow: 0.2rem 0.2rem 0.2rem grey;
+    color: white;
+}
+
+.boxGame button:hover{
+    box-shadow: none;
+}
+
+.boxGame .error{
+    color: #D8000C;
+    background-color: #FFBABA;
+}
+
+.boxGame .success{
+    color: #1d8764;
+    background-color: #41f1b6;
+}
