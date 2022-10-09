@@ -1,9 +1,3 @@
-:root{
-  --j: 0;
-  --k: 0;
-  --l: 0;
-}
-
 main{
     padding: 0;
 }
@@ -50,7 +44,7 @@ img{
 }
 
 
-.boxGame .game .boxMacas, .boxGame .game .boxLaranjas{
+.boxGame .game .macas, .boxGame .game .laranjas{
   display: flex;
   gap: 0.5rem;
   margin-bottom: 0.5rem;
@@ -58,7 +52,7 @@ img{
   justify-content: center;
 }
 
-.boxGame .game input{
+.boxGame input{
   border: 1px solid gray;
   height: 3rem;
   width: 12rem;
@@ -67,9 +61,14 @@ img{
   border-radius: 0.5rem;
 }
 
-.boxGame .game input[type=number]::-webkit-inner-spin-button { 
+.boxGame  input[type=number]::-webkit-inner-spin-button { 
     -webkit-appearance: none;
-    
+}
+
+.boxGame .boxResult{
+  display: flex;
+  gap: 1rem;
+  align-items: center;
 }
 
 .boxGame button{
@@ -158,6 +157,7 @@ select:hover{
   display: flex;
   justify-content: space-between;
   width: 100%;
+  margin-top: 0.5rem;
 }
 
 .boxInit button{

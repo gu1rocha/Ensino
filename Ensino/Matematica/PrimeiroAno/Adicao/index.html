@@ -36,15 +36,22 @@
                 <p>HÁ QUANTAS MAÇÃS E QUANTAS LARANJAS?</p>
             </h2>
             <div class="game">
-                <div class="box">
-                    <div class="boxMacas"></div>
+                <div class="box boxMacas">
+                    <div class="macas"></div>
                     <input type="number">
                 </div>
                 <h1>+</h1>
-                <div class="box">
-                    <div class="boxLaranjas"></div>
+                <div class="box boxLaranjas">
+                    <div class="laranjas"></div>
                     <input type="number">
                 </div>
+            </div>
+            <h2>
+                HÁ QUANTAS FRUTAS NO TOTAL?
+            </h2>
+            <div class="boxResult">
+                <h1>=</h1>
+                <input type="number">
             </div>
             <button>VERIFICAR</button>
             <div class="boxRealod">
@@ -63,5 +70,7 @@
             </div>
         </div>
     </main>
+    <audio src="./assets/music/comemorando.mp3" id="certo"></audio>
+    <audio src="./assets/music/ops.mp3" id="errado"></audio>
 </body>
 </html>
