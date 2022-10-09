@@ -1,0 +1,41 @@
+nav{
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    background-color: wheat;
+    box-shadow: 0.1rem 0.1rem 0.1rem grey;
+    padding: 1rem 0;
+}
+
+nav .container{
+    display: grid;
+    width: 96%;
+    margin: 0 auto;
+    gap: 0.5rem;
+    grid-template-columns: 3rem calc(96% - 7rem) 3rem;
+    align-items: center;
+    justify-content: space-between;
+    justify-items: center;
+}
+
+nav .container span{
+    cursor: pointer;
+    font-weight: bold;
+}
+
+nav .container span:hover{
+    transform: scale(1.2)
+}
+
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 4.5rem 1rem 1rem 1rem;
+    position: relative;
+    min-height: calc(100vh - 7.5rem);
+    flex-flow: row wrap;
+    align-content: center;
+}

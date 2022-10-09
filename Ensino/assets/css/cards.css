@@ -1,0 +1,22 @@
+main .card{
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 300ms ease;
+    box-shadow: 0.5rem 0.5rem 1rem grey;
+    border-radius: 1rem;
+    cursor: pointer;
+    overflow: hidden;
+    width: 25rem;
+    height: 18rem;
+    padding: 1rem 0;
+    justify-content: space-between;
+}
+
+main .card:hover{
+    box-shadow: 0rem 0rem 1rem grey;
+}
+
+main .card img{
+    height: 10rem;
+}
