@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adição</title>
+    <title>Multiplicação</title>
 
     <meta name="keywords" content="HTML, CSS, JavaScript">
     <meta name="author" content="Gui Rocha">
@@ -25,31 +25,31 @@
     <nav>
         <div class="container">
             <span class="material-symbols-sharp" onclick="window.location.href='../'">arrow_back_ios</span>
-            <h1>Adição</h1>
+            <h1>Multiplicação</h1>
             <span class="material-symbols-sharp">info</span>
         </div>
     </nav>
     <main>
         <div class="boxGame">
+            <h1>
+                VAMOS MULTIPLICAR?
+            </h1>
+            <div class="game"></div>
             <h2>
-                <p>VAMOS CONTAR?</p>
-                <p>HÁ QUANTAS MAÇÃS E QUANTAS LARANJAS?</p>
+                <p>HÁ QUANTAS MAÇÃS EM CADA GRUPO?</p>
             </h2>
-            <div class="game">
-                <div class="box boxMacas">
-                    <div class="macas"></div>
-                    <input type="number">
-                </div>
-                <h1>+</h1>
-                <div class="box boxLaranjas">
-                    <div class="laranjas"></div>
-                    <input type="number">
-                </div>
-            </div>
+            <input type="number" id="inputMultiplicando">
+            <h2>
+                <p>HÁ QUANTOS GRUPO?</p>
+            </h2>
+            <input type="number" id="inputMultiplicador">
             <h2>
                 HÁ QUANTAS FRUTAS NO TOTAL?
             </h2>
             <div class="boxResult">
+                <h1 id="Multiplicando"></h1>
+                <h1>X</h1>
+                <h1 id="Multiplicador"></h1>
                 <h1>=</h1>
                 <input type="number">
             </div>
