@@ -10,7 +10,7 @@ let circulos =  [13,22,24,31,32,34,35,42,44,53]
 
 let error = false, verificador = 1, text = '', numMaca = 0, numLaranja = 0
 
-let gerarNum = () => Math.floor(Math.random() * (4 - 1)) + 1;
+let gerarNum = () => Math.floor(Math.random() * 4) + 1;
 
 let RemoverTextoClasse = obj => obj = obj.className.replace(/[^0-9]/g,'')
 
