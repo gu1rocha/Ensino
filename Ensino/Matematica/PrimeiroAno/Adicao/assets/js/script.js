@@ -8,8 +8,9 @@ const boxRealod = document.querySelector('.boxRealod')
 
 const certo = document.querySelector('#certo')
 const errado = document.querySelector('#errado')
+const aplauso = document.querySelector('#aplauso')
 
-let error = false, verificador = 1, text = '', numMaca = 0, numLaranja = 0
+let error = false, verificador = 1, text = '', numMaca = 0, numLaranja = 0, step = 1
 
 let gerarNum = (max) => Math.floor(Math.random() * max) + 1;
 
@@ -56,8 +57,15 @@ document.querySelector('button').addEventListener(('click'),()=>{
         PlayAudio(errado)
         boxRealod.removeAttribute('style')
     }else{
-        PlayAudio(certo)
-        endGame({h1Text: 'PARABÉNS!!!', h2Text: 'VAMOS CONTINUAR?', h1Color: 'green', btnText: 'CONTINUAR'})
+        step++
+        if(step > 3){
+            PlayAudio(aplauso)
+            endGame({h1Text: 'PARABÉNS!!!', h2Text: 'VOCÊ CONSEGUIU!', h1Color: 'green', btnText: 'INICIAR'})
+            step = 1
+        }else{
+            PlayAudio(certo)
+            endGame({h1Text: 'PARABÉNS!!!', h2Text: 'VAMOS CONTINUAR?', h1Color: 'green', btnText: 'CONTINUAR'})
+        }
     }
 })
 
